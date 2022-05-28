@@ -5,7 +5,7 @@
 [![QQ交流群](https://img.shields.io/badge/QQ交流群-22200020-orange)](https://jq.qq.com/?_wv=1027&k=kjB5JNiC)
 
 
-# Marsh 集成应用开发框架（solon cloud + water + grit）
+# Marsh 集成应用开发框架（solon cloud + water）
 
 ## 一、marsh-api（统一接口开发集成框架）
 
