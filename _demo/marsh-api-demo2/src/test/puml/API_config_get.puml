@@ -1,0 +1,7 @@
+@startuml
+start
+:获取tag下所有配置;
+:格式化;
+:输出;
+stop
+@enduml

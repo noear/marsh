@@ -1,0 +1,10 @@
+server.port: 8080
+server.request.maxRequestSize: 2Mb
+
+solon.app:
+  name: demoapi
+  group: water
+
+solon.cloud.water:
+  server: "waterapi:9371"
+

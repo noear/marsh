@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.noear</groupId>
+    <artifactId>marsh</artifactId>
+    <version>dev</version>
+    <packaging>pom</packaging>
+
+    <name>_root</name>
+
+    <modules>
+        <module>marsh-parent</module>
+
+        <module>_demo/marsh-admin-demo0</module>
+        <module>_demo/marsh-admin-demo1</module>
+        <module>_demo/marsh-admin-demo2</module>
+
+        <module>_demo/marsh-api-demo0</module>
+        <module>_demo/marsh-api-demo1</module>
+        <module>_demo/marsh-api-demo2</module>
+    </modules>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

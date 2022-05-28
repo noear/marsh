@@ -1,0 +1,37 @@
+server.session:
+  timeout: 7200
+  state.jwt:
+    allowUseHeader: true
+    secret: "Mbwv70uWhBCLDmNiRKBgW/PMXIucwAtyRO4hxuS1jNY="
+
+
+server.port: 8091
+server.request.maxRequestSize: 2Mb
+
+solon.app:
+  name: demoapi
+  group: demo
+
+solon.cloud.water:
+  server: "waterapi:9371"
+  discovery:
+    enable: true  #设为 false 时，solon.cloud.local 会生效（一般用于RPC本地调试）
+
+
+solon.cloud.local:
+  breaker:
+    global: 10
+
+
+solon.logging.logger:
+  "org.eclipse.jetty.*":
+    level: INFO
+  "com.zaxxer.hikari.*":
+    level: INFO
+
+# 用于RPC本地调试
+#solon.cloud.local:
+#  discovery:
+#    service:
+#      helloapi:
+#        - "http://localhost:7112"

@@ -1,0 +1,9 @@
+@startuml
+start
+:查找_gateway配置;
+:查找服务列表;
+:设定代理和策略;
+:设定服务节点列表;
+:输出;
+stop
+@enduml

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//noear.org//DTD Mapper 3.0//EN" "http://noear.org/dtd/weed3-mapper.dtd">
+<mapper namespace="apidemo1.dso.mapper.ConfigMapper"
+        import="apidemo1.model.data.*"
+        proxy="apidemo1.dso.service.ConfigService"
+        db="water">
+
+    <sql id="getConfigsByTag" return="List[WaterCfgPropertiesDo]" remarks="获取配置列表">
+        select * from water_cfg_properties where tag = @{tag:String}
+    </sql>
+
+    <sql id="getConfig" return="WaterCfgPropertiesDo" remarks="获取配置">
+        select * from water_cfg_properties where `tag` = @{tag:String} and `key` = @{key:String}
+    </sql>
+
+    <sql id="addConfig" return="long" remarks="设置配置">
+        insert into water_cfg_properties(`tag`,`key`,`value`)
+            values (@{tag:String}, @{key:String}, @{value:String})
+    </sql>
+
+    <sql id="udpConfig" return="long" remarks="设置配置" declare="tag:String,key:String,value:String">
+        update water_cfg_properties
+            set `value`= @{value:String}
+            where `tag`= @{tag:String} and `key`= @{key:String}
+    </sql>
+
+</mapper>

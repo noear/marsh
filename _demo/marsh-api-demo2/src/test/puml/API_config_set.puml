@@ -1,0 +1,13 @@
+@startuml
+start
+:获取tag+key的配置;
+if(配置id=0) then(true)
+:插入配置;
+note left
+说明配置不存在
+end note
+else
+:更新配置;
+endif
+stop
+@enduml

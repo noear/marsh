@@ -1,0 +1,17 @@
+server.port: 8080
+server.request.maxRequestSize: 2Mb
+
+
+server.session:
+  state:
+    jwt:
+      allowUseHeader: true
+
+solon.app:
+  name: demoapi
+  group: water
+
+
+solon.cloud.water:
+  server: "waterapi:9371"
+
