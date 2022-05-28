@@ -34,7 +34,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.1.1</version>
+        <version>1.0.0</version>
     </parent>
     
     <dependencies>
