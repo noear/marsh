@@ -6,13 +6,13 @@
 
     <groupId>org.noear</groupId>
     <artifactId>marsh-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>solon-parent</artifactId>
-        <version>1.9.0</version>
+        <version>1.9.1</version>
         <relativePath />
     </parent>
 
@@ -50,11 +50,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <marsh.ver>1.0.3</marsh.ver>
+        <marsh.ver>1.0.4</marsh.ver>
 
-        <water.ver>2.7.2</water.ver>
+        <water.ver>2.7.3</water.ver>
         <rock.ver>2.2.1</rock.ver>
-        <grit.ver>1.2.2</grit.ver>
+        <grit.ver>1.2.3</grit.ver>
 
         <snack3.ver>3.2.29</snack3.ver>
         <weed3.ver>3.4.27</weed3.ver>
