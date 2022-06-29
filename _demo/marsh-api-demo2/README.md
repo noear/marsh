@@ -4,7 +4,7 @@
 
 实战项目中，建议使用 ApiGateway3x 风格开发接口，其对应的接口描述可参考：
 
-**_doc/对外接口协议（草案）.md**
+**API.md**
 
 
 ---
@@ -16,7 +16,7 @@
 
 准备工作：
 
-* 使用 Water::配置管理/访问密钥，添加密钥；同时改掉单测里的相关密钥（ak/sk）
+* 使用 Water::配置管理/访问密钥，添加密钥；同时改掉单测里的相关密钥（app_key/app_secret_key）
 * 使用 Water::配置管理/多语言包，添加语言包：
   * [appName]语言包，对应本地messages的包，例：demoapi
   * [appName__code]语言包，对应输出状态码的国际化需求，例：demoapi__code
