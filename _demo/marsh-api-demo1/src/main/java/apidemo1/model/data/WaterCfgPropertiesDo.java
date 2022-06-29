@@ -3,9 +3,6 @@ package apidemo1.model.data;
 import java.util.Date;
 import org.noear.weed.annotation.*;
 
-            
-import lombok.Data;
-
 @Table("water_cfg_properties")
 public class WaterCfgPropertiesDo{
   @PrimaryKey

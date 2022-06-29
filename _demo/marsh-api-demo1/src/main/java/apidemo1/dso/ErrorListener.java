@@ -1,7 +1,5 @@
 package apidemo1.dso;
 
-
-import apidemo1.App;
 import lombok.extern.slf4j.Slf4j;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.core.event.EventListener;
