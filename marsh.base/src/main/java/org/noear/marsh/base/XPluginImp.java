@@ -13,7 +13,7 @@ import org.noear.solon.validation.ValidatorManager;
 import org.noear.solon.logging.utils.TagsMDC;
 import org.noear.marsh.base.validation.NoRepeatSubmitCheckerNew;
 import org.noear.marsh.base.validation.WhitelistCheckerNew;
-import org.noear.water.WaterClient;
+import org.noear.water.utils.BehaviorUtils;
 import org.noear.water.utils.TextUtils;
 import org.noear.weed.WeedConfig;
 import org.slf4j.Logger;
@@ -105,7 +105,7 @@ public class XPluginImp implements Plugin {
                 }
             }
 
-            WaterClient.Track.trackOfPerformance(Solon.cfg().appName() , cmd, 1000);
+            BehaviorUtils.trackOfPerformance(Solon.cfg().appName() , cmd, 1000);
 
             if (isTrackEnable) {
                 String tag = cmd.context.schema();
@@ -146,7 +146,7 @@ public class XPluginImp implements Plugin {
                 String userDisplayName = getUserDisplayName(ctx);
                 String userId = getUserId(ctx);
 
-                WaterClient.Track.trackOfBehavior(Solon.cfg().appName(), cmd, ctx.userAgent(), ctx.pathNew(), userId + "." + userDisplayName, ctx.realIp());
+                BehaviorUtils.trackOfBehavior(Solon.cfg().appName(), cmd, ctx.userAgent(), ctx.pathNew(), userId + "." + userDisplayName, ctx.realIp());
             }
 
             if (isTrackEnable) {
