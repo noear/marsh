@@ -17,6 +17,6 @@
       <name>aliyun maven</name>
       <url>https://maven.aliyun.com/repository/central/</url>
     </mirror>
-    
+
   </mirrors>
 </settings>
