@@ -16,7 +16,7 @@ public class XPluginImp implements Plugin {
     public void start(AopContext context) {
         ValidatorManager.setFailureHandler(new org.noear.marsh.uapi.validation.ValidatorFailureHandlerNew());
 
-        Solon.global().onEvent(BeanLoadEndEvent.class, e -> {
+        Solon.app().onEvent(BeanLoadEndEvent.class, e -> {
             if (Aop.get(IAppFactory.class) == null) {
                 Aop.wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
             }

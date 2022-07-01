@@ -51,7 +51,7 @@ public class XPluginImp implements Plugin {
 
         initWeed();
 
-        Solon.global().filter(Integer.MIN_VALUE, (ctx, chain) -> {
+        Solon.app().filter(Integer.MIN_VALUE, (ctx, chain) -> {
             try {
                 chain.doFilter(ctx);
             } finally {
