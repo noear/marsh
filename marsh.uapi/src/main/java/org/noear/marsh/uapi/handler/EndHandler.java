@@ -38,9 +38,9 @@ public class EndHandler implements Handler {
 
         String path = null;
 
-        if(_usePath){
+        if (_usePath) {
             path = ctx.pathNew();
-        }else {
+        } else {
             Action action = ctx.action();
 
             if (action != null) {
@@ -63,10 +63,5 @@ public class EndHandler implements Handler {
         CloudClient.metric().addMeter(WW.track_service, service, _node, milliseconds);
         CloudClient.metric().addMeter(WW.track_from, service, _from, milliseconds);
 
-
-//        String _from = CloudClient.trace().getFromId();
-//        String service = Instance.local().service();
-//        String node = Instance.local().address();
-//        WaterClient.Track.track(service, _tag, path, timecount.stop().milliseconds(), node, _from);
     }
 }
