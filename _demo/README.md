@@ -12,7 +12,7 @@
 | marsh-admin-demo2 | marsh-admin-demo1 基础上，增加更多的功能和体系结构            | 有water环境即可运行单元测试        |
 
 
-如果有本地调试，需添加 "服务发现/上游配置"，tag=grit,service=gritapi,代理网关=gritapi的外网ip端口
+如果要本地调试，需添加 "服务发现/上游配置"，tag=grit,service=gritapi,代理网关=gritapi的外网ip端口
 
 ### 2、基于 marsh-api 构建的接口服务示例：
 
