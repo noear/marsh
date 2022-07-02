@@ -9,3 +9,9 @@ solon.app:
 solon.cloud.water:
   server: "waterapi:9371"
 
+# 记录器级别的配置示例
+solon.logging.logger:
+  "root": #默认记录器配置
+    level: INFO
+  "com.zaxxer.hikari": #包名
+    level: WARN
