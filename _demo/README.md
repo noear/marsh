@@ -7,10 +7,12 @@
 
 | 示例   | 介绍                                           | 备注                  |
 |------|----------------------------------------------|---------------------|
-| marsh-admin-demo0 | 只有一个类，连接water环境即可运行；能看到菜单，但没有功能实现            | 需water环境+gritdock服务 |
-| marsh-admin-demo1 | marsh-admin-demo0 基础上，加了1个控制器；对应的功能菜单可操作 | 需water环境+gritdock服务        |
-| marsh-admin-demo2 | marsh-admin-demo1 基础上，增加更多的功能和体系结构            | 需water环境+gritdock服务        |
+| marsh-admin-demo0 | 只有一个类，连接water环境即可运行；能看到菜单，但没有功能实现            | 有water环境即可运行单元测试 |
+| marsh-admin-demo1 | marsh-admin-demo0 基础上，加了1个控制器；对应的功能菜单可操作 | 有water环境即可运行单元测试        |
+| marsh-admin-demo2 | marsh-admin-demo1 基础上，增加更多的功能和体系结构            | 有water环境即可运行单元测试        |
 
+
+如果有本地调试，需添加 "服务发现/上游配置"，tag=grit,service=gritapi,代理网关=gritapi的外网ip端口
 
 ### 2、基于 marsh-api 构建的接口服务示例：
 
