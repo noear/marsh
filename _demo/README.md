@@ -5,11 +5,11 @@
 
 ### 1、基于 marsh-admin 构建的管理后台示例（从简到繁的演化）：
 
-| 示例   | 介绍                                           |  备注               |
-|------|----------------------------------------------|------------------|
-| marsh-admin-demo0 | 只有一个类，连接water环境即可运行；能看到菜单，但没有功能实现            | 有water环境即可运行     |
-| marsh-admin-demo1 | marsh-admin-demo0 基础上，加了1个控制器；对应的功能菜单可操作 |  有water环境即可运行     |
-| marsh-admin-demo2 | marsh-admin-demo1 基础上，增加更多的功能和体系结构            |  有water环境即可运行     |
+| 示例   | 介绍                                           | 备注                  |
+|------|----------------------------------------------|---------------------|
+| marsh-admin-demo0 | 只有一个类，连接water环境即可运行；能看到菜单，但没有功能实现            | 需water环境+gritdock服务 |
+| marsh-admin-demo1 | marsh-admin-demo0 基础上，加了1个控制器；对应的功能菜单可操作 | 需water环境+gritdock服务        |
+| marsh-admin-demo2 | marsh-admin-demo1 基础上，增加更多的功能和体系结构            | 需water环境+gritdock服务        |
 
 
 ### 2、基于 marsh-api 构建的接口服务示例：
