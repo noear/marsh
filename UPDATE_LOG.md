@@ -1,3 +1,7 @@
+#### 1.1.1
+* 升级 solon 为 1.9.3
+* 升级 water 为 2.8.1（需要 water server 2.8.0+ 支持）
+
 #### 1.1.0
 * 升级 solon 为 1.9.1
 * 升级 water 为 2.8.0（需要 water server 2.8.0 支持）
