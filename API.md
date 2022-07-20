@@ -46,7 +46,7 @@ BODY ::加密{  //参数，整体加密
 ```
 
 * 响应格式
-```json
+```
 HEADER Sign=$sign   //协议签名（会话数据签名，避免串改）
 HEADER Token=$token //协议令牌（会话信息）
 BODY ::加密{
