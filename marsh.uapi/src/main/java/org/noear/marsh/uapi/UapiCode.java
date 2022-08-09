@@ -2,7 +2,7 @@ package org.noear.marsh.uapi;
 
 
 import org.noear.solon.core.handle.Result;
-import org.noear.solon.ext.DataThrowable;
+import org.noear.solon.core.util.DataThrowable;
 
 public class UapiCode extends DataThrowable {
     private int code = 0;
