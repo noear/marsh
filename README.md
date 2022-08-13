@@ -15,8 +15,8 @@
 
 #### 特性
 
-* 采用 solon cloud 框架
-* 采用 water 一站式服务治理中台
+* 采用 solon 框架
+* 采用 water 一站式服务治理中台（完整支持 solon cloud 接口定义）
 * 采用 weed3 ORM框架
 * 采用集成式网关
 * 集成大量常用网关拦截器
@@ -65,8 +65,8 @@
 
 #### 特性
 
-* 采用 solon cloud 框架
-* 采用 water 一站式服务治理中台
+* 采用 solon 框架
+* 采用 water 一站式服务治理中台（完整支持 solon cloud 接口定义）
 * 采用 grit 权限控制中台
 * 采用 weed3 ORM框架
 * 采用前后不分离模式，避免前后扯皮
