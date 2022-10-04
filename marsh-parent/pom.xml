@@ -6,13 +6,13 @@
 
     <groupId>org.noear</groupId>
     <artifactId>marsh-parent</artifactId>
-    <version>${revision}</version>
+    <version>1.1.4</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>solon-parent</artifactId>
-        <version>1.10.2</version>
+        <version>1.10.5</version>
         <relativePath />
     </parent>
 
@@ -43,7 +43,6 @@
 
 
     <properties>
-        <revision>1.1.3</revision>
 
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -52,11 +51,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
+        <marsh.ver>1.1.4</marsh.ver>
         <water.ver>2.8.2</water.ver>
         <rock.ver>2.4.0</rock.ver>
-        <grit.ver>1.3.3</grit.ver>
+        <grit.ver>1.3.4</grit.ver>
 
-        <snack3.ver>3.2.35</snack3.ver>
+        <snack3.ver>3.2.40</snack3.ver>
         <weed3.ver>3.4.29</weed3.ver>
         <redisx.ver>1.4.3</redisx.ver>
 
@@ -68,41 +68,41 @@
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh.base</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh.uapi</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh.uadmin</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh-lib</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh-job</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh-api</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.noear</groupId>
                 <artifactId>marsh-admin</artifactId>
-                <version>${revision}</version>
+                <version>${marsh.ver}</version>
             </dependency>
 
             <dependency>
@@ -351,33 +351,6 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
-            </plugin>
-
-            <!-- 版本号管理 -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.2.7</version>
-                <configuration>
-                    <updatePomFile>true</updatePomFile>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>flatten</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>flatten</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>flatten.clean</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

@@ -2,7 +2,6 @@ package org.noear.marsh.uapi;
 
 import org.noear.solon.Solon;
 import org.noear.solon.cloud.impl.CloudI18nBundleFactory;
-import org.noear.solon.core.Aop;
 import org.noear.solon.core.AopContext;
 import org.noear.solon.core.event.BeanLoadEndEvent;
 import org.noear.solon.i18n.I18nBundleFactory;
@@ -17,12 +16,12 @@ public class XPluginImp implements Plugin {
         ValidatorManager.setFailureHandler(new org.noear.marsh.uapi.validation.ValidatorFailureHandlerNew());
 
         Solon.app().onEvent(BeanLoadEndEvent.class, e -> {
-            if (Aop.get(IAppFactory.class) == null) {
-                Aop.wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
+            if (Solon.context().getBean(IAppFactory.class) == null) {
+                Solon.context().wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
             }
 
-            if (Aop.get(I18nBundleFactory.class) == null) {
-                Aop.wrapAndPut(I18nBundleFactory.class, new CloudI18nBundleFactory());
+            if (Solon.context().getBean(I18nBundleFactory.class) == null) {
+                Solon.context().wrapAndPut(I18nBundleFactory.class, new CloudI18nBundleFactory());
             }
         });
     }

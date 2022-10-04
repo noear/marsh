@@ -43,6 +43,6 @@ public class EsUtil {
             httpUtils.header("Authorization", auth);
         }
 
-        return httpUtils.exec2(method.toUpperCase()); //call(request);
+        return httpUtils.execAsBody(method.toUpperCase()); //call(request);
     }
 }

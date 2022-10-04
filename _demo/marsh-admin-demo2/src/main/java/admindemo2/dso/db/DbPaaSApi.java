@@ -25,8 +25,7 @@ public class DbPaaSApi {
         return db().table("paas_file").where("file_type=?", type.code)
                 .groupBy("tag")
                 .orderByAsc("tag")
-                .select("tag,count(*) counts")
-                .getList(TagCountsVo.class);
+                .selectList("tag,count(*) counts", TagCountsVo.class);
     }
 
     private static String list_sels = "file_id,tag,label,path,`rank`,note,is_staticize,is_editable,is_disabled,is_exclude,link_to,edit_mode,content_type,update_fulltime,plan_state,plan_begin_time,plan_last_time,plan_last_timespan,plan_interval,plan_max,plan_count";
@@ -74,15 +73,13 @@ public class DbPaaSApi {
         }
 
         return qr.orderByAsc("path")
-                .select(list_sels)
-                .getList(PaasFileDo.class);
+                .selectList(list_sels, PaasFileDo.class);
     }
 
     public static PaasFileDo getFile(int file_id) throws SQLException {
         return db().table("paas_file")
                 .where("file_id=?", file_id)
-                .select("*")
-                .getItem(PaasFileDo.class);
+                .selectItem("*", PaasFileDo.class);
     }
 
     public static int delFile(int file_id) throws SQLException {
@@ -127,8 +124,7 @@ public class DbPaaSApi {
         return db().table("paas_file")
                 .whereIn("file_id", list)
                 .andEq("file_type", type.code)
-                .select("*")
-                .getList(PaasFileDo.class);
+                .selectList("*", PaasFileDo.class);
     }
 
     //批量导入

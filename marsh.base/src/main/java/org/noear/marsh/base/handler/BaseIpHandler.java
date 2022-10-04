@@ -19,7 +19,7 @@ public class BaseIpHandler implements Handler {
 
             if (CloudClient.list().inListOfServerIp(ip) == false) {
                 ctx.setHandled(true);
-                ctx.statusSet(403);
+                ctx.status(403);
                 ctx.output(ip + ", not whitelit!");
             }
         }

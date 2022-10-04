@@ -1,5 +1,6 @@
 package org.noear.marsh.uapi;
 
+import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.core.Aop;
 import org.noear.solon.core.event.EventBus;
@@ -20,7 +21,7 @@ public class Uapi {
 
     public Uapi() {
         ctx = Context.current();
-        appFactory = Aop.get(IAppFactory.class);
+        appFactory = Solon.context().getBean(IAppFactory.class);
     }
 
 
