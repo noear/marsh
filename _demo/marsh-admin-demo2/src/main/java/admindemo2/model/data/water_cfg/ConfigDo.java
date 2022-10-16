@@ -7,10 +7,10 @@ import org.noear.redisx.RedisClient;
 import org.noear.snack.ONode;
 import org.noear.water.utils.ConfigUtils;
 import org.noear.water.utils.TextUtils;
-import org.noear.weed.DbContext;
-import org.noear.weed.cache.ICacheServiceEx;
-import org.noear.weed.cache.LocalCache;
-import org.noear.weed.cache.memcached.MemCache;
+import org.noear.wood.DbContext;
+import org.noear.wood.cache.ICacheServiceEx;
+import org.noear.wood.cache.LocalCache;
+import org.noear.wood.cache.memcached.MemCache;
 
 import java.util.Properties;
 

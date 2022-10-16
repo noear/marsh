@@ -15,7 +15,7 @@ import org.noear.marsh.base.validation.NoRepeatSubmitCheckerNew;
 import org.noear.marsh.base.validation.WhitelistCheckerNew;
 import org.noear.water.utils.BehaviorUtils;
 import org.noear.water.utils.TextUtils;
-import org.noear.weed.WeedConfig;
+import org.noear.wood.WoodConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -29,7 +29,7 @@ public class XPluginImp implements Plugin {
     static Logger log = LoggerFactory.getLogger(XPluginImp.class);
 
     boolean isDebugMode;
-    boolean isWeedStyle2;
+    boolean isWoodStyle2;
     boolean isTrackEnable;
     boolean isErrorLogEnable;
 
@@ -44,12 +44,12 @@ public class XPluginImp implements Plugin {
 
         isDebugMode = Solon.cfg().isDebugMode() || Solon.cfg().isFilesMode();
 
-        isWeedStyle2 = "sql".equals(GlobalConfig.sqlPrintStyle());
+        isWoodStyle2 = "sql".equals(GlobalConfig.sqlPrintStyle());
         isTrackEnable = GlobalConfig.sqlTrackEnable(isDebugMode);
         isErrorLogEnable = GlobalConfig.sqlErrorLogEnable();
 
 
-        initWeed();
+        initWood();
 
         Solon.app().filter(Integer.MIN_VALUE, (ctx, chain) -> {
             try {
@@ -63,20 +63,20 @@ public class XPluginImp implements Plugin {
 
 
     /**
-     * 初始化Weed监听事件
+     * 初始化Wood监听事件
      */
-    protected void initWeed() {
+    protected void initWood() {
         Class<?> gritClz = Utils.loadClass(clzGritClient);
 
         if (gritClz == null) {
-            initWeedForApi();
+            initWoodForApi();
         } else {
-            initWeedForAdmin();
+            initWoodForAdmin();
         }
 
 
-        WeedConfig.onException((cmd, err) -> {
-            TagsMDC.tag0("weed");
+        WoodConfig.onException((cmd, err) -> {
+            TagsMDC.tag0("wood");
 
             if (isErrorLogEnable) {
                 if (cmd == null) {
@@ -94,11 +94,11 @@ public class XPluginImp implements Plugin {
         });
     }
 
-    private void initWeedForApi() {
+    private void initWoodForApi() {
         //api项目
-        WeedConfig.onExecuteAft(cmd -> {
+        WoodConfig.onExecuteAft(cmd -> {
             if (isDebugMode) {
-                if (isWeedStyle2) {
+                if (isWoodStyle2) {
                     log.debug(cmd.toSqlString());
                 } else {
                     log.debug(cmd.text + "\r\n" + ONode.stringify(cmd.paramMap()));
@@ -118,11 +118,11 @@ public class XPluginImp implements Plugin {
         });
     }
 
-    private void initWeedForAdmin() {
+    private void initWoodForAdmin() {
         //admin 项目
-        WeedConfig.onExecuteAft((cmd) -> {
+        WoodConfig.onExecuteAft((cmd) -> {
             if (isDebugMode) {
-                if (isWeedStyle2) {
+                if (isWoodStyle2) {
                     log.debug(cmd.toSqlString());
                 } else {
                     log.debug(cmd.text + "\r\n" + ONode.stringify(cmd.paramMap()));

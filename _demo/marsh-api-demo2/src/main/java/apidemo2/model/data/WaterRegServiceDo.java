@@ -2,7 +2,7 @@ package apidemo2.model.data;
 
 import java.io.Serializable;
 import java.util.Date;
-import org.noear.weed.annotation.*;
+import org.noear.wood.annotation.*;
 
 
 @Table("water_reg_service")

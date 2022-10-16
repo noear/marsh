@@ -1,7 +1,7 @@
 package admindemo2.dso;
 
-import org.noear.weed.cache.ICacheServiceEx;
-import org.noear.weed.cache.LocalCache;
+import org.noear.wood.cache.ICacheServiceEx;
+import org.noear.wood.cache.LocalCache;
 
 /**
  * @author noear 2021/2/16 created

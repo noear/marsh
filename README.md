@@ -19,7 +19,7 @@
 
 * 采用 solon 框架
 * 采用 water 一站式服务治理中台（完整支持 solon cloud 接口定义）
-* 采用 weed3 ORM框架
+* 采用 wood ORM框架
 * 采用集成式网关
 * 集成大量常用网关拦截器
 * 集成 jwt token
@@ -46,7 +46,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.1.5</version>
+        <version>1.2.0</version>
     </parent>
     
     <dependencies>
@@ -70,7 +70,7 @@
 * 采用 solon 框架
 * 采用 water 一站式服务治理中台（完整支持 solon cloud 接口定义）
 * 采用 grit 权限控制中台
-* 采用 weed3 ORM框架
+* 采用 wood ORM框架
 * 采用前后不分离模式，避免前后扯皮
 * 集成慢SQL自动记录（由 Water 提供支持）
 * 集成登录用户的行为自动记录（由 Water 提供支持）
@@ -88,7 +88,7 @@
 #### 约定
 
 * 只需要开发具体内容页
-* 使用 weed3.table 接口开发 Dao 层，以快速开发
+* 使用 wood.table 接口开发 Dao 层，以快速开发
 * 视图模型采用统一的 ModelAndView 模型组装并输出
 
 #### 依赖配置
@@ -98,7 +98,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.1.5</version>
+        <version>1.2.0</version>
     </parent>
     
     <dependencies>

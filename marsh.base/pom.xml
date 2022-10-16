@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.1.5</version>
+        <version>1.2.0</version>
         <relativePath>../marsh-parent/pom.xml</relativePath>
     </parent>
 
@@ -74,24 +74,24 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>weed3</artifactId>
+            <artifactId>wood</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>weed3-solon-plugin</artifactId>
+            <artifactId>wood-solon-plugin</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>weed3.cache.memcached</artifactId>
-            <version>${weed3.ver}</version>
+            <artifactId>wood.cache.memcached</artifactId>
+            <version>${wood.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>weed3.cache.redis</artifactId>
-            <version>${weed3.ver}</version>
+            <artifactId>wood.cache.redis</artifactId>
+            <version>${wood.ver}</version>
         </dependency>
     </dependencies>
 

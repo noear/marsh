@@ -25,7 +25,7 @@
 #### 要求
 
 * 只需要开发具体内容页
-* 使用 weed3.table 接口开发 Dao 层，以快速开发
+* 使用 wood.table 接口开发 Dao 层，以快速开发
 * 视图模型采用统一的 ModelAndView 模型组装并输出
 
 #### 依赖配置
@@ -35,7 +35,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.1.5</version>
+        <version>1.2.0</version>
     </parent>
     
     <dependencies>

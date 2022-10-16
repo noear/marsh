@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.util.*;
 
 import apidemo2.model.data.WaterRegServiceDo;
-import org.noear.weed.annotation.Db;
-import org.noear.weed.xml.Namespace;
+import org.noear.wood.annotation.Db;
+import org.noear.wood.xml.Namespace;
 
 @Db("water")
 @Namespace("apidemo2.dso.mapper.RegisterMapper")

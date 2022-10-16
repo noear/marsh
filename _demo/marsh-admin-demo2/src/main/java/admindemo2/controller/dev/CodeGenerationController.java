@@ -15,7 +15,7 @@ import org.noear.solon.core.handle.ModelAndView;
 import org.noear.solon.core.handle.Result;
 import org.noear.solon.view.freemarker.RenderUtil;
 import org.noear.water.utils.TextUtils;
-import org.noear.weed.DbContext;
+import org.noear.wood.DbContext;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -90,7 +90,7 @@ public class CodeGenerationController extends BaseController2 {
 
         Map<String, Object> model = new HashMap<>();
 
-        List<FieldDo> fields = db.sql(buildSqlGetFields(tb)).getList(new FieldDo());
+        List<FieldDo> fields = db.sql(buildSqlGetFields(tb)).getList(FieldDo.class);
 
         for (FieldDo f : fields) {
 

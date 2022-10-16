@@ -1,7 +1,7 @@
 package apidemo1.model.data;
 
 import java.util.Date;
-import org.noear.weed.annotation.*;
+import org.noear.wood.annotation.*;
 
 @Table("water_cfg_properties")
 public class WaterCfgPropertiesDo{

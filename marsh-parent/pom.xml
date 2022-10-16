@@ -6,13 +6,13 @@
 
     <groupId>org.noear</groupId>
     <artifactId>marsh-parent</artifactId>
-    <version>1.1.5</version>
+    <version>1.2.0</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>solon-parent</artifactId>
-        <version>1.10.5</version>
+        <version>1.10.7</version>
         <relativePath />
     </parent>
 
@@ -51,14 +51,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <marsh.ver>1.1.5</marsh.ver>
-        <water.ver>2.8.2</water.ver>
-        <rock.ver>2.4.1</rock.ver>
-        <grit.ver>1.3.5</grit.ver>
+        <marsh.ver>1.2.0</marsh.ver>
+        <water.ver>2.9.0</water.ver>
+        <rock.ver>2.5.0</rock.ver>
+        <grit.ver>1.4.0</grit.ver>
 
-        <snack3.ver>3.2.40</snack3.ver>
-        <weed3.ver>3.4.29</weed3.ver>
-        <redisx.ver>1.4.3</redisx.ver>
+        <snack3.ver>3.2.44</snack3.ver>
+        <wood.ver>1.0.0</wood.ver>
+        <mongox.ver>1.0.0</mongox.ver>
+        <redisx.ver>1.4.4</redisx.ver>
 
         <okhttp.ver>3.14.9</okhttp.ver>
     </properties>
@@ -113,8 +114,8 @@
 
             <dependency>
                 <groupId>org.noear</groupId>
-                <artifactId>weed3</artifactId>
-                <version>${weed3.ver}</version>
+                <artifactId>wood</artifactId>
+                <version>${wood.ver}</version>
             </dependency>
 
             <dependency>
