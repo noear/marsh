@@ -22,7 +22,7 @@ public abstract class UapiGateway extends Gateway {
 
     /**
      * 渲染定制
-     * */
+     */
     @Override
     public void render(Object obj, Context c) throws Throwable {
         if (c.getRendered()) {
@@ -42,6 +42,10 @@ public abstract class UapiGateway extends Gateway {
         } else {
             //如果没有按Result tyle 渲染
             //
+            if (obj == null && c.status() == 404) {
+                obj = UapiCodes.CODE_4001011;
+            }
+
             Result result = null;
             if (obj instanceof UapiCode) {
                 c.attrSet(Attrs.log_level, Level.WARN.toInt());
