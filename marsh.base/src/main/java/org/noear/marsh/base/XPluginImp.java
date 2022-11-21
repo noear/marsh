@@ -14,7 +14,6 @@ import org.noear.solon.logging.utils.TagsMDC;
 import org.noear.marsh.base.validation.NoRepeatSubmitCheckerNew;
 import org.noear.marsh.base.validation.WhitelistCheckerNew;
 import org.noear.water.utils.BehaviorUtils;
-import org.noear.water.utils.TextUtils;
 import org.noear.wood.WoodConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -109,7 +108,7 @@ public class XPluginImp implements Plugin {
 
             if (isTrackEnable) {
                 String tag = cmd.context.schema();
-                if (TextUtils.isEmpty(tag)) {
+                if (Utils.isEmpty(tag)) {
                     tag = "sql";
                 }
 
@@ -151,7 +150,7 @@ public class XPluginImp implements Plugin {
 
             if (isTrackEnable) {
                 String tag = cmd.context.schema();
-                if (TextUtils.isEmpty(tag)) {
+                if (Utils.isEmpty(tag)) {
                     tag = "sql";
                 }
 

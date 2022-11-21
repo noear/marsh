@@ -1,12 +1,11 @@
 package org.noear.marsh.base.handler;
 
+import org.noear.marsh.base.utils.Timecount;
 import org.noear.solon.Solon;
 import org.noear.solon.cloud.CloudClient;
 import org.noear.solon.cloud.model.Instance;
 import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Handler;
-import org.noear.water.WW;
-import org.noear.water.utils.Timecount;
 
 /**
  * 结束计时处理器（完成计时，并发送到WATER）[后置处理]
@@ -14,6 +13,9 @@ import org.noear.water.utils.Timecount;
  * @author noear
  * */
 public class BaseEndHandler implements Handler {
+    static final String group_service = "_service"; //from org.noear.water.WW
+    static final String group_from = "_from";
+
     private String _tag;
 
     public BaseEndHandler(String tag) {
@@ -40,7 +42,7 @@ public class BaseEndHandler implements Handler {
         String _node = Instance.local().address();
 
         CloudClient.metric().addMeter(service, _tag, ctx.pathNew(), milliseconds);
-        CloudClient.metric().addMeter(WW.track_service, service, _node, milliseconds);
-        CloudClient.metric().addMeter(WW.track_from, service, _from, milliseconds);
+        CloudClient.metric().addMeter(group_service, service, _node, milliseconds);
+        CloudClient.metric().addMeter(group_from, service, _from, milliseconds);
     }
 }

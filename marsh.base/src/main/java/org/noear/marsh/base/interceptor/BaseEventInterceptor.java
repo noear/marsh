@@ -1,5 +1,6 @@
 package org.noear.marsh.base.interceptor;
 
+import org.noear.marsh.base.utils.Timecount;
 import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.cloud.CloudClient;
@@ -7,7 +8,6 @@ import org.noear.solon.cloud.CloudEventHandler;
 import org.noear.solon.cloud.CloudEventInterceptor;
 import org.noear.solon.cloud.model.Event;
 import org.noear.solon.logging.utils.TagsMDC;
-import org.noear.water.utils.Timecount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

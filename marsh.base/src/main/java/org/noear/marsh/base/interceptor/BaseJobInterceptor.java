@@ -1,12 +1,12 @@
 package org.noear.marsh.base.interceptor;
 
+import org.noear.marsh.base.utils.Timecount;
 import org.noear.solon.Solon;
 import org.noear.solon.cloud.CloudClient;
 import org.noear.solon.cloud.CloudJobHandler;
 import org.noear.solon.cloud.CloudJobInterceptor;
 import org.noear.solon.cloud.model.Job;
 import org.noear.solon.logging.utils.TagsMDC;
-import org.noear.water.utils.Timecount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
