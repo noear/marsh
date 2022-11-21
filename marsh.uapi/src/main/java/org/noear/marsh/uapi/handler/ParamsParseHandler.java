@@ -8,9 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 参数解析拉截器
- *
- * 对cmd 有用；对api 没用（api 不要使用了）
+ * 参数解析拉截器（按需选择）
  *
  * 支持1:
  *  form : p, k

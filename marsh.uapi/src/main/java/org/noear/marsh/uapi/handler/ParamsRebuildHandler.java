@@ -13,14 +13,6 @@ import org.noear.marsh.uapi.common.Attrs;
 
 /**
  * 参数重构拦截器（将输出内容构建为统一的参数模型）
- *
- * 对cmd 有用；对api 没用（api 不要使用了）
- *
- * 支持1:
- *  form : p, k
- * 支持2:
- *  header: Authorization (相当于 form:k)
- *  body: (content type: application/json)（相当于 form:p）
  * */
 public class ParamsRebuildHandler implements Handler {
 
