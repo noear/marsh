@@ -1,6 +1,7 @@
 package org.noear.marsh.base;
 
 
+import org.noear.marsh.base.utils.BehaviorUtils;
 import org.noear.nami.NamiAttachment;
 import org.noear.snack.ONode;
 import org.noear.solon.Solon;
@@ -13,7 +14,6 @@ import org.noear.solon.validation.ValidatorManager;
 import org.noear.solon.logging.utils.TagsMDC;
 import org.noear.marsh.base.validation.NoRepeatSubmitCheckerNew;
 import org.noear.marsh.base.validation.WhitelistCheckerNew;
-import org.noear.water.utils.BehaviorUtils;
 import org.noear.wood.WoodConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

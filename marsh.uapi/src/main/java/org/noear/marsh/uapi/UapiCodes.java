@@ -5,7 +5,6 @@ import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.annotation.Note;
 import org.noear.solon.i18n.I18nService;
-import org.noear.water.utils.TextUtils;
 
 import java.sql.SQLException;
 import java.util.Locale;
@@ -111,7 +110,7 @@ public class UapiCodes {
 
             String description = i18nService.get(locale, String.valueOf(uapiCode.getCode()));
 
-            if (TextUtils.isEmpty(description) == false) {
+            if (Utils.isEmpty(description) == false) {
                 if (uapiCode.getCode() == 4001014) {
                     return description + (uapiCode.getDescription() == null ? "" : "(" + uapiCode.getDescription() + ")");
                 } else {
@@ -135,7 +134,7 @@ public class UapiCodes {
 
             String description = i18nService.get(locale, String.valueOf(uapiCode));
 
-            if (TextUtils.isEmpty(description) == false) {
+            if (Utils.isEmpty(description) == false) {
                 return description;
             }
         }

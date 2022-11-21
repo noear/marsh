@@ -1,5 +1,6 @@
 package org.noear.marsh.uapi.handler;
 
+import org.noear.marsh.base.utils.Timecount;
 import org.noear.solon.Solon;
 import org.noear.solon.cloud.CloudClient;
 import org.noear.solon.cloud.model.Instance;
@@ -7,13 +8,14 @@ import org.noear.solon.core.handle.Action;
 import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Handler;
 import org.noear.marsh.uapi.common.Attrs;
-import org.noear.water.WW;
-import org.noear.water.utils.Timecount;
 
 /**
  * 结束计时拦截器（完成计时，并发送到WATER）
  * */
 public class EndHandler implements Handler {
+     static final String group_service = "_service";
+     static final String group_from = "_from";
+
     private String _tag;
     private boolean _usePath = false;
 
@@ -60,8 +62,8 @@ public class EndHandler implements Handler {
 
 
         CloudClient.metric().addMeter(service, _tag, path, milliseconds);
-        CloudClient.metric().addMeter(WW.track_service, service, _node, milliseconds);
-        CloudClient.metric().addMeter(WW.track_from, service, _from, milliseconds);
+        CloudClient.metric().addMeter(group_service, service, _node, milliseconds);
+        CloudClient.metric().addMeter(group_from, service, _from, milliseconds);
 
     }
 }

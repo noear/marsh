@@ -4,6 +4,8 @@ import org.noear.grit.client.GritClient;
 import org.noear.grit.client.GritUtil;
 import org.noear.grit.model.domain.Resource;
 import org.noear.grit.model.domain.Subject;
+import org.noear.marsh.uadmin.utils.ImageUtils;
+import org.noear.marsh.uadmin.utils.RandomUtils;
 import org.noear.solon.Utils;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.annotation.Mapping;
@@ -11,8 +13,6 @@ import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.MethodType;
 import org.noear.solon.core.handle.ModelAndView;
 import org.noear.solon.core.handle.Result;
-import org.noear.water.utils.ImageUtils;
-import org.noear.water.utils.RandomUtils;
 
 import org.noear.marsh.uadmin.dso.Session;
 

@@ -15,7 +15,6 @@ import org.noear.solon.Utils;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.core.handle.Context;
 import org.noear.marsh.uadmin.dso.Session;
-import org.noear.water.WW;
 
 import java.io.IOException;
 import java.util.List;
@@ -58,7 +57,7 @@ public class HeaderTag implements TemplateDirectiveModel {
         StringBuilder buf = new StringBuilder();
         buf.append("<header>");
 
-        buf.append("<label title='").append(WW.water_version).append("'>"); //new
+        buf.append("<label>"); //new
         buf.append(Solon.cfg().appTitle());
         buf.append("</label>\n");//new
 

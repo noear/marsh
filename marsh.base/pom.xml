@@ -67,10 +67,10 @@
             <artifactId>solon.cloud</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.noear</groupId>
-            <artifactId>water-solon-cloud-plugin</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.noear</groupId>-->
+<!--            <artifactId>water-solon-cloud-plugin</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.noear</groupId>

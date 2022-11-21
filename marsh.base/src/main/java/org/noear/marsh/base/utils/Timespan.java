@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @author noear
- * @since 2.1
+ * @since 1.2
  */
 public class Timespan {
     private long interval = 0;

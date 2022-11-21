@@ -1,8 +1,8 @@
 package org.noear.marsh.uapi.decoder;
 
+import org.noear.marsh.base.utils.EncryptUtils;
 import org.noear.solon.core.handle.Context;
 import org.noear.marsh.uapi.app.IApp;
-import org.noear.water.utils.EncryptUtils;
 
 import java.net.URLDecoder;
 

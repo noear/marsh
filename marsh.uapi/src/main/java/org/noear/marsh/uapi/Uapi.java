@@ -1,5 +1,6 @@
 package org.noear.marsh.uapi;
 
+import org.noear.snack.core.utils.StringUtil;
 import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.core.Aop;
@@ -10,7 +11,6 @@ import org.noear.marsh.uapi.app.IAppImpl;
 import org.noear.marsh.uapi.common.Attrs;
 import org.noear.solon.annotation.Singleton;
 import org.noear.solon.core.handle.Context;
-import org.noear.water.utils.TextUtils;
 
 import java.sql.SQLException;
 
@@ -104,7 +104,7 @@ public class Uapi {
 
             if (Utils.isNotEmpty(appStr)) {
                 try {
-                    if (TextUtils.isNumeric(appStr)) {
+                    if (StringUtil.isNumber(appStr)) {
                         _app = getAppById(Integer.parseInt(appStr));
                     } else {
                         _app = getAppByKey(appStr);

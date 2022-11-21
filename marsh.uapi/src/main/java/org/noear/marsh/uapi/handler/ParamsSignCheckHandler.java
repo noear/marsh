@@ -5,9 +5,9 @@ import org.noear.marsh.uapi.app.IApp;
 import org.noear.marsh.uapi.encoder.DefEncoder;
 import org.noear.marsh.uapi.encoder.Encoder;
 import org.noear.marsh.uapi.UapiCodes;
+import org.noear.solon.Utils;
 import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Handler;
-import org.noear.water.utils.TextUtils;
 
 /**
  * 参数签名检测拦截器
@@ -77,7 +77,7 @@ public class ParamsSignCheckHandler implements Handler {
      * 签权算法
      */
     private boolean checkSign(Context context, Uapi uapi, IApp app, String apiName, String orgInput) throws Exception {
-        if (TextUtils.isEmpty(apiName)) {
+        if (Utils.isEmpty(apiName)) {
             return false;
         }
 

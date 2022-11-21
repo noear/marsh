@@ -2,7 +2,7 @@ package org.noear.marsh.base.utils;
 
 /**
  * @author noear
- * @since 2.1
+ * @since 1.2
  */
 public class Timecount {
     private long start_time;
