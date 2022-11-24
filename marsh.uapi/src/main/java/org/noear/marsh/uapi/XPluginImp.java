@@ -1,6 +1,8 @@
 package org.noear.marsh.uapi;
 
+import org.noear.marsh.uapi.app.impl.LocalAppFactoryImpl;
 import org.noear.solon.Solon;
+import org.noear.solon.Utils;
 import org.noear.solon.cloud.impl.CloudI18nBundleFactory;
 import org.noear.solon.core.AopContext;
 import org.noear.solon.core.event.BeanLoadEndEvent;
@@ -17,7 +19,11 @@ public class XPluginImp implements Plugin {
 
         Solon.app().onEvent(BeanLoadEndEvent.class, e -> {
             if (Solon.context().getBean(IAppFactory.class) == null) {
-                Solon.context().wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
+                if (Utils.loadClass("org.noear.water.WaterClient") == null) {
+                    Solon.context().wrapAndPut(IAppFactory.class, new LocalAppFactoryImpl());
+                } else {
+                    Solon.context().wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
+                }
             }
 
             if (Solon.context().getBean(I18nBundleFactory.class) == null) {
