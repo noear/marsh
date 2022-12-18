@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.2.4</version>
+        <version>1.2.5</version>
         <relativePath>../marsh-parent/pom.xml</relativePath>
     </parent>
 
@@ -49,11 +49,6 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>httputils-solon-cloud-plugin</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.noear</groupId>
             <artifactId>snack3</artifactId>
         </dependency>
 
@@ -65,6 +60,11 @@
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon.cloud</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>solon.cloud.httputils</artifactId>
         </dependency>
 
         <dependency>

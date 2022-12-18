@@ -1,5 +1,8 @@
+#### 1.2.5
+* 升级 solon 为 1.11.4
+
 #### 1.2.4
-* 升级 solon 为 1.11.1
+* 升级 solon 为 1.11.3
 * 支持排除 water-solon-cloud-plugin，切换为 local-solon-cloud-plugin
 
 #### 1.2.3
