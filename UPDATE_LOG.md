@@ -1,9 +1,16 @@
 #### 1.2.5
-* 升级 solon 为 1.11.4
+* 升级 solon 为 1.11.6
+* 升级 water 为 2.9.2
+* 升级 rock 为 2.5.3
+* 升级 snack3 为 3.2.50
+* 升级 wood 为 1.0.7
 
 #### 1.2.4
 * 升级 solon 为 1.11.3
+* 取消对 water-solon-cloud-plugin 的直接依赖
 * 支持排除 water-solon-cloud-plugin，切换为 local-solon-cloud-plugin
+* 添加 ParamsRebuildNoAppHandler 类
+* 调整 ParamsLocaleHandler 类，增加默认 Locale 设定
 
 #### 1.2.3
 * 升级 solon 为 1.10.13
