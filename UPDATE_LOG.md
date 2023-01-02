@@ -7,9 +7,9 @@
 
 #### 1.2.4
 * 升级 solon 为 1.11.3
-* 取消对 water-solon-cloud-plugin 的直接依赖
-* 支持排除 water-solon-cloud-plugin，切换为 local-solon-cloud-plugin
-* 添加 ParamsRebuildNoAppHandler 类
+* 取消 water-solon-cloud-plugin 的直接依赖
+* 支持 cloud 与 local 切换。即排除 water-solon-cloud-plugin，切换为 local-solon-cloud-plugin
+* 添加 ParamsRebuildNoAppHandler 类，用于无 App 的网关
 * 调整 ParamsLocaleHandler 类，增加默认 Locale 设定
 
 #### 1.2.3
@@ -75,3 +75,4 @@
 * solon 升为：1.8.2
 * water 升为：2.7.1
 * grit 升为 1.2.1
+* IApp 提供者由 IAppFactory 进行切换（以前由Rock固定提供）
