@@ -67,6 +67,7 @@
             <artifactId>solon.cloud.httputils</artifactId>
         </dependency>
 
+        <!-- 允许排除，并切换为 local-solon-cloud-plugin -->
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>water-solon-cloud-plugin</artifactId>
