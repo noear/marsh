@@ -1,11 +1,11 @@
 package org.noear.marsh.uapi;
 
 import org.noear.marsh.uapi.app.impl.LocalAppFactoryImpl;
-import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.cloud.impl.CloudI18nBundleFactory;
 import org.noear.solon.core.AopContext;
-import org.noear.solon.core.event.BeanLoadEndEvent;
+import org.noear.solon.core.event.AppBeanLoadEndEvent;
+import org.noear.solon.core.event.EventBus;
 import org.noear.solon.i18n.I18nBundleFactory;
 import org.noear.marsh.uapi.app.IAppFactory;
 import org.noear.marsh.uapi.app.impl.WaterAppFactoryImpl;
@@ -17,17 +17,17 @@ public class XPluginImp implements Plugin {
     public void start(AopContext context) {
         ValidatorManager.setFailureHandler(new org.noear.marsh.uapi.validation.ValidatorFailureHandlerNew());
 
-        Solon.app().onEvent(BeanLoadEndEvent.class, e -> {
-            if (Solon.context().getBean(IAppFactory.class) == null) {
+        EventBus.subscribe(AppBeanLoadEndEvent.class, e -> {
+            if (context.getBean(IAppFactory.class) == null) {
                 if (Utils.loadClass("org.noear.water.WaterClient") == null) {
-                    Solon.context().wrapAndPut(IAppFactory.class, new LocalAppFactoryImpl());
+                    context.wrapAndPut(IAppFactory.class, new LocalAppFactoryImpl());
                 } else {
-                    Solon.context().wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
+                    context.wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
                 }
             }
 
-            if (Solon.context().getBean(I18nBundleFactory.class) == null) {
-                Solon.context().wrapAndPut(I18nBundleFactory.class, new CloudI18nBundleFactory());
+            if (context.getBean(I18nBundleFactory.class) == null) {
+                context.wrapAndPut(I18nBundleFactory.class, new CloudI18nBundleFactory());
             }
         });
     }
