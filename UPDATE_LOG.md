@@ -1,14 +1,14 @@
-#### 1.2.6
-* 升级 solon 为 1.12.2
+#### 1.2.7
+* 升级 solon 为 1.12.2 //修复 water-solon-cloud-plugin 1.11.5+
 * 升级 water 为 2.9.3
 * 升级 rock 为 2.5.4
 * 升级 grit 为 1.4.4
 
 #### 1.2.6
-* 升级 solon 为 1.12.1 //有问题，water-solon-cloud-plugin 1.11.5
+* 升级 solon 为 1.12.1 //有问题，water-solon-cloud-plugin 1.11.5+
 
 #### 1.2.5
-* 升级 solon 为 1.11.6 //有问题，water-solon-cloud-plugin 1.11.5
+* 升级 solon 为 1.11.6 //有问题，water-solon-cloud-plugin 1.11.5+
 * 升级 water 为 2.9.2
 * 升级 rock 为 2.5.3
 * 升级 snack3 为 3.2.50
