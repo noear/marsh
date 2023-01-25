@@ -1,3 +1,7 @@
+#### 1.3.0
+* 升级 solon 为 2.0.0
+* 升级 snack3 为 3.2.50
+
 #### 1.2.7
 * 升级 solon 为 1.12.2 //修复 water-solon-cloud-plugin 1.11.5+
 * 升级 water 为 2.9.3

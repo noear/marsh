@@ -109,7 +109,7 @@ public class PropController extends BaseController2 {
     //批量导入
     @Mapping("ajax/import")
     public Result importDo(Context ctx, String tag, UploadedFile file) throws Exception {
-        String jsonD = IOUtils.toString(file.content);
+        String jsonD = IOUtils.toString(file.getContent());
         JsondEntity entity = JsondUtils.decode(jsonD);
 
         if (entity == null || "water_cfg_properties".equals(entity.table) == false) {
