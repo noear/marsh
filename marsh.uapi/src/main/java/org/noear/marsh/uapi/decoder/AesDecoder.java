@@ -31,7 +31,7 @@ public class AesDecoder implements Decoder {
                 text = URLDecoder.decode(text, "UTF-8");
             }
 
-            return EncryptUtils.aesDecrypt(text, app.getAppSecretKey(), algorithm, offset);
+            return EncryptUtils.aesDecrypt(text, app.getAccessSecretKey(), algorithm, offset);
         }
 
         return text;

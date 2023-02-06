@@ -48,7 +48,7 @@ public class OutputSignHandler implements Handler {
 
             //{name}#{output}#{secretKey}
             StringBuilder buf = new StringBuilder();
-            buf.append(uapi.name()).append("#").append(output).append("#").append(app.getAppSecretKey());
+            buf.append(uapi.name()).append("#").append(output).append("#").append(app.getAccessSecretKey());
 
             String x_sign = _encoder.tryEncode(ctx, app, buf.toString());
             ctx.headerSet(Attrs.h_sign, x_sign);

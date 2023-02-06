@@ -24,6 +24,6 @@ public class AesEncoder implements Encoder {
 
     @Override
     public String tryEncode(Context ctx, IApp app, String text) throws Exception {
-        return EncryptUtils.aesEncrypt(text, app.getAppSecretKey(), algorithm, offset);
+        return EncryptUtils.aesEncrypt(text, app.getAccessSecretKey(), algorithm, offset);
     }
 }

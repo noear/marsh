@@ -89,7 +89,7 @@ public class ParamsSignCheckHandler implements Handler {
 
         //{name}#{verId}#{orgInput}#{secretKey}#{orgInputTimestamp}
         StringBuilder sb = new StringBuilder();
-        sb.append(apiName).append("#").append(verId).append("#").append(orgInput).append("#").append(app.getAppSecretKey()).append("#").append(orgInputTimestamp);
+        sb.append(apiName).append("#").append(verId).append("#").append(orgInput).append("#").append(app.getAccessSecretKey()).append("#").append(orgInputTimestamp);
 
         String _sign_ = _encoder.tryEncode(context, app, sb.toString());
 

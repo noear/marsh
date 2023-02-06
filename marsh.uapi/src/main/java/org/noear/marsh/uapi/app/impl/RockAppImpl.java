@@ -34,12 +34,12 @@ public class RockAppImpl implements IApp {
     }
 
     @Override
-    public String getAppSecretKey() {
+    public String getAccessSecretKey() {
         return appModel.app_secret_key;
     }
 
     @Override
-    public String getAppSecretSalt() {
+    public String getAccessSecretSalt() {
         return appModel.app_secret_salt;
     }
 

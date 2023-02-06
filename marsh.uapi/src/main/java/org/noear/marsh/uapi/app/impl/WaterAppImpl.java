@@ -32,12 +32,12 @@ public class WaterAppImpl implements IApp {
     }
 
     @Override
-    public String getAppSecretKey() {
+    public String getAccessSecretKey() {
         return keyM.access_secret_key();
     }
 
     @Override
-    public String getAppSecretSalt() {
+    public String getAccessSecretSalt() {
         return keyM.access_secret_salt();
     }
 
