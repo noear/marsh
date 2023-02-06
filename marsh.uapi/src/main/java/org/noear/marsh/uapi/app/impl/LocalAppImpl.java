@@ -19,6 +19,9 @@ public class LocalAppImpl implements IApp {
     private String accessSecretSalt;
 
     public LocalAppImpl(Props props){
+        this.tag = props.get("tag", "");
+        this.label = props.get("label", "");
+
         this.appId = props.getInt("appId", 0);
         this.appGroupId = props.getInt("appGroupId", 0);
         this.userGroupId = props.getInt("userGroupId", 0);
@@ -26,9 +29,6 @@ public class LocalAppImpl implements IApp {
         this.accessKey = props.get("accessKey", "");
         this.accessSecretKey = props.get("accessSecretKey", "");
         this.accessSecretSalt = props.get("accessSecretSalt", "");
-
-        this.tag = props.get("tag", "");
-        this.label = props.get("label", "");
     }
     @Override
     public int getAppId() {
