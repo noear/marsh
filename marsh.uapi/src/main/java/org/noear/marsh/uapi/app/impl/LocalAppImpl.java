@@ -7,18 +7,18 @@ import org.noear.solon.core.Props;
  * @author noear 2022/4/8 created
  */
 public class LocalAppImpl implements IApp {
-    Props props;
+    private String tag;
+    private String label;
 
     private int appId;
     private int appGroupId;
     private int userGroupId;
+
     private String accessKey;
     private String accessSecretKey;
     private String accessSecretSalt;
 
     public LocalAppImpl(Props props){
-        this.props = props;
-
         this.appId = props.getInt("appId", 0);
         this.appGroupId = props.getInt("appGroupId", 0);
         this.userGroupId = props.getInt("userGroupId", 0);
@@ -26,6 +26,9 @@ public class LocalAppImpl implements IApp {
         this.accessKey = props.get("accessKey", "");
         this.accessSecretKey = props.get("accessSecretKey", "");
         this.accessSecretSalt = props.get("accessSecretSalt", "");
+
+        this.tag = props.get("tag", "");
+        this.label = props.get("label", "");
     }
     @Override
     public int getAppId() {
@@ -44,26 +47,26 @@ public class LocalAppImpl implements IApp {
 
     @Override
     public String getAccessKey() {
-        return props.get("accessKey","");
+        return accessKey;
     }
 
     @Override
     public String getAccessSecretKey() {
-        return props.get("accessSecretKey","");
+        return accessSecretKey;
     }
 
     @Override
     public String getAccessSecretSalt() {
-        return props.get("accessSecretSalt","");
+        return accessSecretSalt;
     }
 
     @Override
     public String getTag() {
-        return props.get("tag","");
+        return tag;
     }
 
     @Override
     public String getLabel() {
-        return props.get("label","");
+        return label;
     }
 }
