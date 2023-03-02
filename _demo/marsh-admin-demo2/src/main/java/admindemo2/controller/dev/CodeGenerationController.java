@@ -4,16 +4,13 @@ import admindemo2.controller.BaseController2;
 import admindemo2.dso.db.DbPaaSApi;
 import admindemo2.dso.db.DbWaterCfgApi;
 import admindemo2.model.view.TagCountsVo;
-import admindemo2.model.data.water.FieldDo;
 import admindemo2.model.data.water_cfg.ConfigDo;
 import admindemo2.model.data.water_paas.PaasFileDo;
 import admindemo2.model.data.water_paas.PaasFileType;
-import admindemo2.utils.UnderlineCamelUtil;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solon.core.handle.ModelAndView;
 import org.noear.solon.core.handle.Result;
-import org.noear.solon.view.freemarker.RenderUtil;
 import org.noear.water.utils.TextUtils;
 import org.noear.wood.DbContext;
 
@@ -78,64 +75,5 @@ public class CodeGenerationController extends BaseController2 {
 
         return Result.succeed(tbs);
 
-    }
-
-    @Mapping("ajax/getcode")
-    public Result get(String tag,
-                         String key,
-                         String tb,
-                         int tml_id) throws Exception {
-
-        DbContext db = DbWaterCfgApi.getConfigByTagName(tag , key).getDb();
-
-        Map<String, Object> model = new HashMap<>();
-
-        List<FieldDo> fields = db.sql(buildSqlGetFields(tb)).getList(FieldDo.class);
-
-        for (FieldDo f : fields) {
-
-            if ("PRI".equals(f.key)) {
-                model.put("pri_key", f.field);
-            }
-
-            if (TextUtils.isEmpty(f.type)) {
-                continue;
-            }
-
-            if (f.type.startsWith("int")||f.type.startsWith("tinyint")) {
-                f.type = "int";
-                f.def = "0";
-            } else if (f.type.startsWith("bigint")) {
-                f.type = "long";
-                f.def = "0l";
-            } else if (f.type.startsWith("float")) {
-                f.type = "float";
-                f.def = "0F";
-            } else if (f.type.startsWith("double")) {
-                f.type = "double";
-                f.def = "0D";
-            } else if (f.type.startsWith("decimal")) {
-                f.type = "BigDecimal";
-                f.def = "BigDecimal.ZERO";
-            } else if (f.type.startsWith("varchar") || f.type.startsWith("char") || f.type.startsWith("text") || f.type.startsWith("longtext") || f.type.startsWith("json")) {
-                f.type = "String";
-                f.def = "null";
-            } else if (f.type.startsWith("datetime") || f.type.startsWith("date") || f.type.startsWith("time")) {
-                f.type = "Date";
-                f.def = "null";
-            }
-        }
-
-        PaasFileDo tml = DbPaaSApi.getFile(tml_id);
-
-        model.put("fields", fields);
-        model.put("table_camel", UnderlineCamelUtil.underline2Camel(tb, false));
-        model.put("tag", tag);
-        model.put("key", key);
-        model.put("tb", tb);
-
-        String rst = RenderUtil.render(tml.content, model);
-
-        return Result.succeed(rst);
     }
 }
