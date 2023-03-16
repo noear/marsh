@@ -19,10 +19,6 @@ public class WaterAppImpl implements IApp {
         this.app_id = keyM.key_id();
 
         if (Utils.isNotEmpty(keyM.metainfo())) {
-            if(keyM.metainfoHas("app_id")){
-                app_id = Integer.parseInt(keyM.metainfoGet("app_id"));
-            }
-
             if(keyM.metainfoHas("app_group_id")){
                 app_group_id = Integer.parseInt(keyM.metainfoGet("app_group_id"));
             }
