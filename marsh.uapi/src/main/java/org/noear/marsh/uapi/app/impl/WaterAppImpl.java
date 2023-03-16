@@ -1,6 +1,7 @@
 package org.noear.marsh.uapi.app.impl;
 
 import org.noear.marsh.uapi.app.IApp;
+import org.noear.solon.Utils;
 import org.noear.water.model.KeyM;
 
 /**
@@ -8,22 +9,43 @@ import org.noear.water.model.KeyM;
  */
 public class WaterAppImpl implements IApp {
     private KeyM keyM;
-    public WaterAppImpl(KeyM keyM){
+
+    private int app_id;
+    private int app_group_id;
+    private int user_group_id;
+
+    public WaterAppImpl(KeyM keyM) {
         this.keyM = keyM;
+        this.app_id = keyM.key_id();
+
+        if (Utils.isNotEmpty(keyM.metainfo())) {
+            if(keyM.metainfoHas("app_id")){
+                app_id = Integer.parseInt(keyM.metainfoGet("app_id"));
+            }
+
+            if(keyM.metainfoHas("app_group_id")){
+                app_group_id = Integer.parseInt(keyM.metainfoGet("app_group_id"));
+            }
+
+            if(keyM.metainfoHas("user_group_id")){
+                user_group_id = Integer.parseInt(keyM.metainfoGet("user_group_id"));
+            }
+        }
     }
+
     @Override
     public int getAppId() {
-        return keyM.key_id();
+        return app_id;
     }
 
     @Override
     public int getAppGroupId() {
-        return 0;
+        return app_group_id;
     }
 
     @Override
     public int getUserGroupId() {
-        return 0;
+        return user_group_id;
     }
 
     @Override
