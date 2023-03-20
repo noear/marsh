@@ -1,11 +1,11 @@
 package org.noear.marsh.uapi;
 
 import org.noear.marsh.uapi.app.impl.LocalAppFactoryImpl;
-import org.noear.solon.Utils;
 import org.noear.solon.cloud.impl.CloudI18nBundleFactory;
 import org.noear.solon.core.AopContext;
 import org.noear.solon.core.event.AppBeanLoadEndEvent;
 import org.noear.solon.core.event.EventBus;
+import org.noear.solon.core.util.ClassUtil;
 import org.noear.solon.i18n.I18nBundleFactory;
 import org.noear.marsh.uapi.app.IAppFactory;
 import org.noear.marsh.uapi.app.impl.WaterAppFactoryImpl;
@@ -19,10 +19,10 @@ public class XPluginImp implements Plugin {
 
         EventBus.subscribe(AppBeanLoadEndEvent.class, e -> {
             if (context.getBean(IAppFactory.class) == null) {
-                if (Utils.loadClass("org.noear.water.WaterClient") == null) {
-                    context.wrapAndPut(IAppFactory.class, new LocalAppFactoryImpl());
-                } else {
+                if (ClassUtil.hasClass(() -> org.noear.water.WaterClient.class)) {
                     context.wrapAndPut(IAppFactory.class, new WaterAppFactoryImpl());
+                }else{
+                    context.wrapAndPut(IAppFactory.class, new LocalAppFactoryImpl());
                 }
             }
 
