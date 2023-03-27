@@ -1,3 +1,12 @@
+#### 1.3.8
+* 增加常量 Attrs::g_region, Attrs::h_authorization
+
+#### 1.3.7
+* WaterAppImpl 增加 app_group_id 和 user_group_id 支持
+* 升级 solon 为 2.2.6
+* 升级 snack3 为 3.2.61
+* 升级 water 为 2.10.2
+
 #### 1.3.6
 * 升级 solon 为 2.2.4
 * 升级 snack3 为 3.2.60

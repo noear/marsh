@@ -17,13 +17,14 @@ public class Attrs {
     public static final String org_output = "org_output";
     public static final String output = "output";
 
-    //public static final String h_authorization = "Authorization";
+    public static final String h_authorization = "Authorization";
     public static final String h_token = "Token";
     public static final String h_sign = "Sign";
     @Deprecated
     public static final String h_clientId = "ClientId";
 
     public static final String g_lang = "g_lang";
+    public static final String g_region = "g_region";
     public static final String g_platform = "g_platform";
     public static final String g_deviceId = "g_deviceId";
 }
