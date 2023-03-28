@@ -6,7 +6,7 @@
 <dependency>
     <groupId>org.noear</groupId>
     <artifactId>grit.server</artifactId>
-    <version>${grit.ver}</version>
+    <version>${grit.version}</version>
 </dependency>
 ```
 

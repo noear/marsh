@@ -47,7 +47,7 @@
             <plugin>
                 <groupId>org.noear</groupId>
                 <artifactId>wood-maven-plugin</artifactId>
-                <version>${wood.ver}</version>
+                <version>${wood.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
