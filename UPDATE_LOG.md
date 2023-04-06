@@ -1,5 +1,8 @@
 #### 1.3.9
 * 修复不能注入 List<List<Long>> 这种多重嵌套的泛型
+* 升级 solon 为 2.2.9
+* 升级 snack3 为 3.2.64
+* 升级 water 为 2.10.3
 
 #### 1.3.8
 * 增加常量 Attrs::g_region, Attrs::h_authorization
