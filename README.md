@@ -73,7 +73,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.3.8</version>
+        <version>1.3.9</version>
     </parent>
     
     <dependencies>
@@ -125,7 +125,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.3.8</version>
+        <version>1.3.9</version>
     </parent>
     
     <dependencies>
