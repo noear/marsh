@@ -19,7 +19,7 @@
 1. g_lang     //语言，使用国际标准代号（中文:zh_CN 英文:en_US 日文:ja_JP）
 2. g_region   //地区，使用国际标准代号（中国大陆:CN 美国:US 日本:JP）
 3. g_platform //平台，根据自己情况定义 (例：1ios 2android 3web )
-4. g_deviceId //客户端设备id
+4. g_deviceId //客户端设备id（可选）
 
 
 **响应：**
