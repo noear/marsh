@@ -4,10 +4,7 @@ import apidemo2.App;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.noear.snack.ONode;
-import org.noear.solon.test.HttpTestBase;
-import org.noear.solon.test.KvMap;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
-import org.noear.solon.test.SolonTest;
+import org.noear.solon.test.*;
 import org.noear.marsh.uapi.common.Attrs;
 
 import java.nio.charset.StandardCharsets;
@@ -19,7 +16,7 @@ import java.util.Map;
  */
 @RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
-public class ApiTest2x extends HttpTestBase {
+public class ApiTest2x extends HttpTester {
     public static final String app_key = "1";
     public static final String app_secret_key = "P5Lrn08HVkA13Ehb";
 

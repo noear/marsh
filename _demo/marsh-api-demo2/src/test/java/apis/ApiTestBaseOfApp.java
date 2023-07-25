@@ -8,6 +8,7 @@ import org.noear.snack.ONode;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
 import org.noear.solon.test.HttpTestBase;
 import org.noear.marsh.uapi.common.Attrs;
+import org.noear.solon.test.HttpTester;
 import org.noear.water.utils.EncryptUtils;
 
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @author noear 2021/9/5 created
  */
 @Slf4j
-public class ApiTestBaseOfApp extends HttpTestBase {
+public class ApiTestBaseOfApp extends HttpTester {
     public static final String app_key = "47fa368188be4e2689e1a74212c49cd8";
     public static final String app_secret_key = "P5Lrn08HVkA13Ehb";
     public static final int client_ver_id = 10001; //1.0.1

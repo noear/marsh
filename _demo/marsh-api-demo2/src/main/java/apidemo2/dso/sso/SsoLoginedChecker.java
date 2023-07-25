@@ -42,7 +42,7 @@ public class SsoLoginedChecker implements LoginedChecker {
         }
 
         long user_id = ctx.sessionAsLong(SESSION_USER_ID, 0L);
-        String sso_key = ctx.session(SESSION_SSO_KEY, "");
+        String sso_key = ctx.sessionOrDefault(SESSION_SSO_KEY, "");
 
         if (user_id == 0) {
             return false;

@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.noear.snack.ONode;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
 import org.noear.solon.test.HttpTestBase;
+import org.noear.solon.test.HttpTester;
 import org.noear.solon.test.SolonJUnit4ClassRunner;
 import org.noear.solon.test.SolonTest;
 import org.noear.marsh.uapi.common.Attrs;
@@ -26,7 +27,7 @@ import java.util.Map;
 @Slf4j
 @RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
-public class ApiTest3_noapp extends HttpTestBase {
+public class ApiTest3_noapp extends HttpTester {
     public static final String app_key = "100000001"; //不存在的 app
     public static final String app_secret_key = "ZVJ4swhbNUV3Uc36";
     public static final int client_ver_id = 10001; //1.0.1

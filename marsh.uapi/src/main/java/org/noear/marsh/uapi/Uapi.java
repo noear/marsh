@@ -109,7 +109,7 @@ public class Uapi {
                         _app = getAppByKey(appStr);
                     }
                 } catch (Exception e) {
-                    EventBus.push(e);
+                    EventBus.publishTry(e);
                 }
             }
         }

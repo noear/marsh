@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.noear.snack.ONode;
 import org.noear.solon.test.HttpTestBase;
+import org.noear.solon.test.HttpTester;
 import org.noear.solon.test.SolonJUnit4ClassRunner;
 import org.noear.solon.test.SolonTest;
 import org.noear.marsh.uapi.UapiCodes;
@@ -17,7 +18,7 @@ import java.util.Map;
  */
 @RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
-public class ApiTest1x extends HttpTestBase {
+public class ApiTest1x extends HttpTester {
     public static final String app_key = "47fa368188be4e2689e1a74212c49cd8";
 
     public ONode call(String apiName, Map<String, Object> args) throws Exception {

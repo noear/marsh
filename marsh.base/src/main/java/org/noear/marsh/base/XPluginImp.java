@@ -10,6 +10,7 @@ import org.noear.solon.cloud.CloudClient;
 import org.noear.solon.core.AopContext;
 import org.noear.solon.core.Plugin;
 import org.noear.solon.core.handle.Context;
+import org.noear.solon.core.util.ClassUtil;
 import org.noear.solon.validation.ValidatorManager;
 import org.noear.solon.logging.utils.TagsMDC;
 import org.noear.marsh.base.validation.NoRepeatSubmitCheckerNew;
@@ -37,8 +38,8 @@ public class XPluginImp implements Plugin {
         ValidatorManager.setNoRepeatSubmitChecker(new NoRepeatSubmitCheckerNew());
         ValidatorManager.setWhitelistChecker(new WhitelistCheckerNew());
 
-        Utils.loadClass("com.mysql.jdbc.Driver");
-        Utils.loadClass("com.mysql.cj.jdbc.Driver");
+        ClassUtil.loadClass("com.mysql.jdbc.Driver");
+        ClassUtil.loadClass("com.mysql.cj.jdbc.Driver");
 
 
         isDebugMode = Solon.cfg().isDebugMode() || Solon.cfg().isFilesMode();
@@ -65,7 +66,7 @@ public class XPluginImp implements Plugin {
      * 初始化Wood监听事件
      */
     protected void initWood() {
-        Class<?> gritClz = Utils.loadClass(clzGritClient);
+        Class<?> gritClz = ClassUtil.loadClass(clzGritClient);
 
         if (gritClz == null) {
             initWoodForApi();
