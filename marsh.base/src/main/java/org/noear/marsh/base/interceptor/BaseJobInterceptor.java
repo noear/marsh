@@ -38,7 +38,7 @@ public class BaseJobInterceptor implements CloudJobInterceptor {
             throw e;
         } finally {
             if (timespan > 0) {
-                CloudClient.metric().addMeter(Solon.cfg().appName(), "job", job.getName(), timespan);
+                CloudClient.metric().addTimer(Solon.cfg().appName(), "job", job.getName(), timespan);
             }
         }
     }

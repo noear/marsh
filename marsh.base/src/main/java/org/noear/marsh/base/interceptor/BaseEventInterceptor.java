@@ -50,7 +50,7 @@ public class BaseEventInterceptor implements CloudEventInterceptor {
             throw e;
         } finally {
             if (timespan > 0) {
-                CloudClient.metric().addMeter(Solon.cfg().appName(), "event", event.topic(), timespan);
+                CloudClient.metric().addTimer(Solon.cfg().appName(), "event", event.topic(), timespan);
             }
         }
     }

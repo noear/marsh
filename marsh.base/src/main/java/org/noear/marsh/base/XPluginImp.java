@@ -113,7 +113,7 @@ public class XPluginImp implements Plugin {
                     tag = "sql";
                 }
 
-                CloudClient.metric().addMeter(Solon.cfg().appName()  + "_sql", tag, cmd.text, cmd.timespan());
+                CloudClient.metric().addTimer(Solon.cfg().appName()  + "_sql", tag, cmd.text, cmd.timespan());
             }
         });
     }
@@ -155,7 +155,7 @@ public class XPluginImp implements Plugin {
                     tag = "sql";
                 }
 
-                CloudClient.metric().addMeter(Solon.cfg().appName() + "_sql", tag, cmd.text, cmd.timespan());
+                CloudClient.metric().addTimer(Solon.cfg().appName() + "_sql", tag, cmd.text, cmd.timespan());
             }
         });
     }

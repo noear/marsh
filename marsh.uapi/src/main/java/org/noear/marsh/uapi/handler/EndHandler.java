@@ -61,9 +61,9 @@ public class EndHandler implements Handler {
         String _node = Instance.local().address();
 
 
-        CloudClient.metric().addMeter(service, _tag, path, milliseconds);
-        CloudClient.metric().addMeter(group_service, service, _node, milliseconds);
-        CloudClient.metric().addMeter(group_from, service, _from, milliseconds);
+        CloudClient.metric().addTimer(service, _tag, path, milliseconds);
+        CloudClient.metric().addTimer(group_service, service, _node, milliseconds);
+        CloudClient.metric().addTimer(group_from, service, _from, milliseconds);
 
     }
 }
