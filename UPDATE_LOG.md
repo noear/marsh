@@ -1,3 +1,6 @@
+#### 1.5.1
+* 升级 snack3 为 3.2.76
+
 #### 1.5.0
 * 升级 solon 为 2.4.2 (CloudMetricService 调整过)
 * 升级 grit 为 1.6.3
