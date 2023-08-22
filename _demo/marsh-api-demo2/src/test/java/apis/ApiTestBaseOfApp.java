@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import okhttp3.Response;
 import org.noear.snack.ONode;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
-import org.noear.solon.test.HttpTestBase;
 import org.noear.marsh.uapi.common.Attrs;
 import org.noear.solon.test.HttpTester;
 import org.noear.water.utils.EncryptUtils;
