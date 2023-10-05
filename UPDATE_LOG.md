@@ -3,6 +3,7 @@
 * 升级 water 为 2.11.4
 * 升级 grit 为 1.6.6
 * 升级 wood 为 1.2.2
+* 调整视图目录为 `resources/WEB-INF/templates/`
 
 #### 1.5.2
 * 升级 solon 为 2.5.4
