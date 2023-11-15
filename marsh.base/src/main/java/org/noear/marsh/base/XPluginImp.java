@@ -1,13 +1,12 @@
 package org.noear.marsh.base;
 
-
 import org.noear.marsh.base.utils.BehaviorUtils;
 import org.noear.nami.NamiAttachment;
 import org.noear.snack.ONode;
 import org.noear.solon.Solon;
 import org.noear.solon.Utils;
 import org.noear.solon.cloud.CloudClient;
-import org.noear.solon.core.AopContext;
+import org.noear.solon.core.AppContext;
 import org.noear.solon.core.Plugin;
 import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.util.ClassUtil;
@@ -34,7 +33,7 @@ public class XPluginImp implements Plugin {
     boolean isErrorLogEnable;
 
     @Override
-    public void start(AopContext context) {
+    public void start(AppContext context) {
         ValidatorManager.setNoRepeatSubmitChecker(new NoRepeatSubmitCheckerNew());
         ValidatorManager.setWhitelistChecker(new WhitelistCheckerNew());
 

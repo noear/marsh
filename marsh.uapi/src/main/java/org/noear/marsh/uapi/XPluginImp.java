@@ -2,7 +2,7 @@ package org.noear.marsh.uapi;
 
 import org.noear.marsh.uapi.app.impl.LocalAppFactoryImpl;
 import org.noear.solon.cloud.impl.CloudI18nBundleFactory;
-import org.noear.solon.core.AopContext;
+import org.noear.solon.core.AppContext;
 import org.noear.solon.core.event.AppBeanLoadEndEvent;
 import org.noear.solon.core.event.EventBus;
 import org.noear.solon.core.util.ClassUtil;
@@ -14,7 +14,7 @@ import org.noear.solon.validation.ValidatorManager;
 
 public class XPluginImp implements Plugin {
     @Override
-    public void start(AopContext context) {
+    public void start(AppContext context) {
         ValidatorManager.setFailureHandler(new org.noear.marsh.uapi.validation.ValidatorFailureHandlerNew());
 
         EventBus.subscribe(AppBeanLoadEndEvent.class, e -> {
