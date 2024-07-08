@@ -4,14 +4,11 @@ import apidemo2.App;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.impl.DefaultClaims;
 import lombok.extern.slf4j.Slf4j;
-import okhttp3.Response;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.snack.ONode;
+import org.noear.solon.net.http.HttpResponse;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
-import org.noear.solon.test.HttpTestBase;
 import org.noear.solon.test.HttpTester;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
 import org.noear.solon.test.SolonTest;
 import org.noear.marsh.uapi.common.Attrs;
 import org.noear.water.utils.EncryptUtils;
@@ -25,7 +22,6 @@ import java.util.Map;
  * @author noear 2021/2/11 created
  */
 @Slf4j
-@RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
 public class ApiTest3_noapp extends HttpTester {
     public static final String app_key = "100000001"; //不存在的 app
@@ -58,7 +54,7 @@ public class ApiTest3_noapp extends HttpTester {
         String sign = String.format("%s.%d.%s.%d", app_key, client_ver_id, EncryptUtils.md5(sb.toString()), timestamp);
 
         //请求
-        Response response = path("/api/v3/app/" + apiName)
+        HttpResponse response = path("/api/v3/app/" + apiName)
                 .header("Content-type","application/json")
                 .header(Attrs.h_token, token)
                 .header(Attrs.h_sign, sign)
@@ -71,7 +67,7 @@ public class ApiTest3_noapp extends HttpTester {
 
         log.debug(token2);
 
-        String json = response.body().string();
+        String json = response.bodyAsString();
 
         System.out.println("Decoded: " + json);
 

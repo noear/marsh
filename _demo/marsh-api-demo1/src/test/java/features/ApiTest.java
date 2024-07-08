@@ -1,12 +1,9 @@
 package features;
 
 import apidemo1.App;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.snack.ONode;
-import org.noear.solon.test.HttpTestBase;
 import org.noear.solon.test.HttpTester;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
 import org.noear.solon.test.SolonTest;
 import org.noear.marsh.uapi.common.Attrs;
 
@@ -15,7 +12,6 @@ import java.util.Map;
 /**
  * @author noear 2021/2/11 created
  */
-@RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
 public class ApiTest extends HttpTester {
     public static final String app_key = "47fa368188be4e2689e1a74212c49cd8";

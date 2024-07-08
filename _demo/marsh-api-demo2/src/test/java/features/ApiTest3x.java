@@ -3,10 +3,9 @@ package features;
 import apidemo2.App;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.impl.DefaultClaims;
-import okhttp3.Response;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.snack.ONode;
+import org.noear.solon.net.http.HttpResponse;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
 import org.noear.solon.test.*;
 import org.noear.marsh.uapi.common.Attrs;
@@ -17,7 +16,6 @@ import java.util.Map;
 /**
  * @author noear 2021/2/11 created
  */
-@RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
 public class ApiTest3x extends HttpTester {
     public static final String app_key = "47fa368188be4e2689e1a74212c49cd8";
@@ -52,14 +50,14 @@ public class ApiTest3x extends HttpTester {
         String sign = String.format("%s.%d.%s.%d", app_key, client_ver_id, EncryptUtils.md5(sb.toString()), timestamp);
 
         //请求
-        Response response = path("/api/v3/app/" + apiName)
+        HttpResponse response = path("/api/v3/app/" + apiName)
                 .header("Content-type", "application/json")
                 .header(Attrs.h_token, token)
                 .header(Attrs.h_sign, sign)
                 .bodyTxt(json_encoded0)
                 .exec("POST");
 
-        String json_encoded2 = response.body().string();
+        String json_encoded2 = response.bodyAsString();
 
         String json = null;
         if (response.code() == 200) {

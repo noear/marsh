@@ -1,10 +1,8 @@
 package features;
 
 import apidemo2.App;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.solon.i18n.I18nUtil;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
 import org.noear.solon.test.SolonTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +12,6 @@ import java.util.Locale;
 /**
  * @author noear 2021/2/24 created
  */
-@RunWith(SolonJUnit4ClassRunner.class)
 @SolonTest(App.class)
 public class I18nTest {
     Logger logger = LoggerFactory.getLogger(LogTest1x.class);

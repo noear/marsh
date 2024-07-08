@@ -3,8 +3,8 @@ package apis;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.impl.DefaultClaims;
 import lombok.extern.slf4j.Slf4j;
-import okhttp3.Response;
 import org.noear.snack.ONode;
+import org.noear.solon.net.http.HttpResponse;
 import org.noear.solon.sessionstate.jwt.JwtUtils;
 import org.noear.marsh.uapi.common.Attrs;
 import org.noear.solon.test.HttpTester;
@@ -49,7 +49,7 @@ public class ApiTestBaseOfApp extends HttpTester {
         String sign = String.format("%s.%d.%s.%d", app_key, client_ver_id, EncryptUtils.md5(sb.toString()), timestamp);
 
         //请求
-        Response response = path("/api/v3/app/" + apiName)
+        HttpResponse response = path("/api/v3/app/" + apiName)
                 .header("Content-type", "application/json")
                 .header(Attrs.h_token, token)
                 .header(Attrs.h_sign, sign)
@@ -62,7 +62,7 @@ public class ApiTestBaseOfApp extends HttpTester {
 
         log.debug(token2);
 
-        String json_encoded2 = response.body().string();
+        String json_encoded2 = response.bodyAsString();
 
         String sign22 = EncryptUtils.md5(apiName + "#" + json_encoded2 + "#" + app_secret_key);
 
