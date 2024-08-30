@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.7.3</version>
+        <version>1.8.0-M1</version>
         <relativePath>../marsh-parent/pom.xml</relativePath>
     </parent>
 
@@ -24,27 +24,27 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.i18n</artifactId>
+            <artifactId>solon-i18n</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.data</artifactId>
+            <artifactId>solon-data</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.cache.jedis</artifactId>
+            <artifactId>solon-cache-jedis</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.cache.spymemcached</artifactId>
+            <artifactId>solon-cache-spymemcached</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.validation</artifactId>
+            <artifactId>solon-security-validation</artifactId>
         </dependency>
 
         <dependency>
@@ -59,12 +59,12 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.cloud</artifactId>
+            <artifactId>solon-cloud-core</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.cloud.httputils</artifactId>
+            <artifactId>solon-net-httputils</artifactId>
         </dependency>
 
         <!-- 允许排除，并切换为 local-solon-cloud-plugin -->

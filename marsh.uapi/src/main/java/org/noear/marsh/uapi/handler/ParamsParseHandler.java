@@ -57,8 +57,8 @@ public class ParamsParseHandler implements Handler {
             String[] signs = org_sign.split("\\.");
 
             if (signs.length >= 4) {
-                ctx.paramSet(Attrs.app_id, signs[0]);
-                ctx.paramSet(Attrs.ver_id, signs[1]);
+                ctx.paramMap().add(Attrs.app_id, signs[0]);
+                ctx.paramMap().add(Attrs.ver_id, signs[1]);
                 ctx.attrSet(Attrs.org_input_sign, signs[2]);
                 ctx.attrSet(Attrs.org_input_timestamp, signs[3]);
             }

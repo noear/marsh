@@ -44,7 +44,7 @@ public class ApiGateway2x extends UapiGateway {
 
             //2.转换参数
             node.get("data").forEach((k, v) -> {
-                c.paramSet(k, v.getString());
+                c.paramMap().add(k, v.getString());
             });
 
             chain.doFilter(c);

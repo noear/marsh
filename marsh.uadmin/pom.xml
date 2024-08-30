@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.7.3</version>
+        <version>1.8.0-M1</version>
         <relativePath>../marsh-parent/pom.xml</relativePath>
     </parent>
     <artifactId>marsh.uadmin</artifactId>
@@ -23,12 +23,12 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.view.freemarker</artifactId>
+            <artifactId>solon-view-freemarker</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.validation</artifactId>
+            <artifactId>solon-security-validation</artifactId>
         </dependency>
 
         <dependency>

@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.noear</groupId>
         <artifactId>marsh-parent</artifactId>
-        <version>1.7.3</version>
+        <version>1.8.0-M1</version>
         <relativePath>../marsh-parent/pom.xml</relativePath>
     </parent>
 
@@ -29,12 +29,12 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.web.cors</artifactId>
+            <artifactId>solon-web-cors</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon.serialization.snack3</artifactId>
+            <artifactId>solon-serialization-snack3</artifactId>
         </dependency>
 
         <dependency>
@@ -84,12 +84,12 @@
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>nami.channel.http.okhttp</artifactId>
+            <artifactId>nami-channel-http-okhttp</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>nami.coder.snack3</artifactId>
+            <artifactId>nami-coder-snack3</artifactId>
         </dependency>
 
     </dependencies>

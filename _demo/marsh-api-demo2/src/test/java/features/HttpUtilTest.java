@@ -4,7 +4,7 @@ import apidemo2.App;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.noear.snack.ONode;
-import org.noear.solon.cloud.utils.http.HttpUtils;
+import org.noear.solon.net.http.HttpUtils;
 import org.noear.solon.test.SolonTest;
 
 import java.io.IOException;

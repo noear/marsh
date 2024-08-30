@@ -33,7 +33,7 @@ public class EnumTag implements TemplateDirectiveModel {
     }
 
     private void build(Environment env, Map map){
-        NvMap mapExt = new NvMap(map);
+        NvMap mapExt = NvMap.from(map);
         group = mapExt.get("group");
         style = mapExt.get("style");
         id =  mapExt.get("id");

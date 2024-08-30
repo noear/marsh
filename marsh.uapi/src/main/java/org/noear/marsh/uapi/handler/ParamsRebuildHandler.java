@@ -75,7 +75,7 @@ public class ParamsRebuildHandler implements Handler {
                     //
                     tmp.obj().forEach((k, v) -> {
                         if (v.isValue()) {
-                            ctx.paramSet(k, v.getString());
+                            ctx.paramMap().add(k, v.getString());
                         }
                     });
                 }
