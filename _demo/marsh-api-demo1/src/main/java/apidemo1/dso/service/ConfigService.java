@@ -5,12 +5,12 @@ import java.util.*;
 
 import apidemo1.model.data.WaterCfgPropertiesDo;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.annotation.ProxyComponent;
+import org.noear.solon.annotation.Component;
 import org.noear.solon.data.annotation.Cache;
 import org.noear.solon.data.annotation.CachePut;
 import org.noear.solon.data.annotation.CacheRemove;
 
-@ProxyComponent
+@Component
 public class ConfigService{
     @Inject
     apidemo1.dso.mapper.ConfigMapper mapper;

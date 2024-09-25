@@ -12,7 +12,7 @@ public class OutputHandler implements Handler {
 
     @Override
     public void handle(Context context) throws Throwable {
-        String output = context.attr(Attrs.output, null);
+        String output = context.attr(Attrs.output);
 
         if (output != null) {
             context.outputAsJson(output);

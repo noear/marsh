@@ -2,22 +2,51 @@ package org.noear.marsh.uapi;
 
 import org.noear.snack.ONode;
 import org.noear.solon.Utils;
-import org.noear.solon.core.handle.Context;
-import org.noear.solon.core.handle.Gateway;
-import org.noear.solon.core.handle.ModelAndView;
-import org.noear.solon.core.handle.Result;
+import org.noear.solon.core.handle.*;
 import org.noear.marsh.uapi.common.Attrs;
 import org.slf4j.event.Level;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public abstract class UapiGateway extends Gateway {
+    private List<Handler> beforeHandlers = new ArrayList<>();
+    private List<Handler> afterHandlers = new ArrayList<>();
 
     /**
      * 语言
      */
     public Locale lang(Context c) {
         return c.getLocale();
+    }
+
+    /**
+     * 前置处理
+     */
+    public void before(Handler handler) {
+        beforeHandlers.add(handler);
+    }
+
+    /**
+     * 后置处理
+     */
+    public void after(Handler handler) {
+        afterHandlers.add(handler);
+    }
+
+    @Override
+    protected void mainBefores(Context c) throws Throwable {
+        for (Handler h : beforeHandlers) {
+            h.handle(c);
+        }
+    }
+
+    @Override
+    protected void mainAfters(Context c) throws Throwable {
+        for (Handler h : afterHandlers) {
+            h.handle(c);
+        }
     }
 
     /**

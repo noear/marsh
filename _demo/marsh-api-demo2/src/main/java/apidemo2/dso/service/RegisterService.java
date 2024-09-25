@@ -5,11 +5,11 @@ import java.util.*;
 
 import apidemo2.model.data.WaterRegServiceDo;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.annotation.ProxyComponent;
+import org.noear.solon.annotation.Component;
 import org.noear.solon.data.annotation.Cache;
 import org.noear.solon.data.annotation.CacheRemove;
 
-@ProxyComponent
+@Component
 public class RegisterService {
     @Inject
     apidemo2.dso.mapper.RegisterMapper mapper;

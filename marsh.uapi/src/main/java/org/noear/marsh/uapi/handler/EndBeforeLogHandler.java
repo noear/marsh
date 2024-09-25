@@ -53,7 +53,7 @@ public class EndBeforeLogHandler implements Handler {
         }
 
         /** 获取一下计时器（开始计时的时候设置的） */
-        Timecount timecount = ctx.attr(Attrs.timecount, null);
+        Timecount timecount = ctx.attr(Attrs.timecount);
         long timespan = 0L;
         if (timecount != null) {
             timespan = timecount.stop().milliseconds();
@@ -153,7 +153,7 @@ public class EndBeforeLogHandler implements Handler {
 
         TagsMDC.tag0(uapi.name()).tag1("user_" + userId).tag2(deviceId);
 
-        int level = ctx.attr(Attrs.log_level, 0);
+        int level = ctx.attrOrDefault(Attrs.log_level, 0);
 
         if (Level.WARN.toInt() == level) {
             logger.warn("{}\r\n{}", logInput, logOutput);

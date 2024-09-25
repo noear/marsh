@@ -162,12 +162,12 @@ public class XPluginImp implements Plugin {
 
     //用于作行为记录
     public String getUserId(Context ctx) {
-        return ctx.attr("user_id", "0");
+        return ctx.attrOrDefault("user_id", "0");
     }
 
     public String getUserDisplayName(Context ctx) {
         if (ctx != null) {
-            return ctx.attr("user_display_name", null);
+            return ctx.attr("user_display_name");
         } else {
             return null;
         }
