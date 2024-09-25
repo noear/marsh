@@ -6,7 +6,7 @@
 
     <groupId>org.noear</groupId>
     <artifactId>marsh-parent</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -47,7 +47,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <marsh.version>1.8.0</marsh.version>
+        <marsh.version>1.9.0</marsh.version>
 
         <water.version>2.15.0</water.version>
         <rock.version>2.11.0</rock.version>
