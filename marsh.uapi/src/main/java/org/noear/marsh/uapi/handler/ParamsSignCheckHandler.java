@@ -56,7 +56,13 @@ public class ParamsSignCheckHandler implements Handler {
                 IApp app = uapi.getApp();
 
                 if (app.getAppId() != uapi.getAppId()) {
+                    //通道不存在
                     throw UapiCodes.CODE_4001010;
+                }
+
+                if (Utils.isEmpty(apiName)) {
+                    //接口不存在
+                    throw UapiCodes.CODE_4001011;
                 }
 
                 isOk = checkSign(ctx, uapi, app, apiName, orgInput);
