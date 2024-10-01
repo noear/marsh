@@ -22,6 +22,8 @@ solon.cloud.local:
   breaker:
     global: 10
 
+solon.serialization.json:
+  longAsString: true #将long型转为字符串输出 （默认为false）
 
 solon.logging.logger:
   "org.eclipse.jetty.*":
