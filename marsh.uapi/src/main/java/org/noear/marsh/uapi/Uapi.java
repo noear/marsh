@@ -9,6 +9,7 @@ import org.noear.marsh.uapi.app.IAppFactory;
 import org.noear.marsh.uapi.app.IAppImpl;
 import org.noear.marsh.uapi.common.Attrs;
 import org.noear.solon.annotation.Singleton;
+import org.noear.solon.core.handle.Action;
 import org.noear.solon.core.handle.Context;
 
 import java.sql.SQLException;
@@ -35,7 +36,12 @@ public class Uapi {
         if (ctx == null) {
             return null;
         } else {
-            return ctx.attr(Attrs.handler_name);
+            Action action = ctx.action();
+            if (action == null) {
+                return null;
+            } else {
+                return action.fullName();
+            }
         }
     }
 
